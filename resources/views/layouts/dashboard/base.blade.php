@@ -182,6 +182,11 @@
                         <span>Super Admin Dashboard</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a href="{{ route('super-admin.dashboard.user_password') }}" class="sidebar-link">
+                        <span>Users Password</span>
+                    </a>
+                </li>
                 @endif
 
                 @if(Auth::user()->roles->contains('label', 8))

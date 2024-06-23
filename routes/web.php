@@ -30,7 +30,8 @@ Route::get('/', function () {
 
 // routes/web.php
 Route::middleware(['auth', 'role:9'])->group(function () {
-    Route::get('/super-admin', [SuperAdminController::class, 'index'])->name('super-admin.dashboard');
+    Route::get('/dashboard/super-admin', [SuperAdminController::class, 'index'])->name('super-admin.dashboard');
+    Route::get('/dashboard/super-admin/user-password', [SuperAdminController::class, 'user_password'])->name('super-admin.dashboard.user_password');
 });
 
 Route::middleware(['auth', 'role:8'])->group(function () {
